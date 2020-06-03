@@ -1,0 +1,38 @@
+/* Title Section */
+.big-heading {
+  font-size: 8rem;
+  text-align: center;
+  padding-top: 3%;
+  font-family: 'Caveat', cursive;
+  color: #903749;
+}
+
+/* Player Section */
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2% 15% 4%;
+}
+
+.player-name {
+  text-align: center;
+  /* color: #e23e57; */
+  color: #903749;
+  font-family: 'Caveat', cursive;
+}
+
+.dice-image{
+  text-align: center;
+  padding: 7% 23% 0%;
+}
+
+/* Footer Section */
+#footer {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+#footer p{
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+}
