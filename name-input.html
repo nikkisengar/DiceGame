@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <!-- Favicon icon -->
   <link rel="icon" href="favicon/dicedice.svg">
 
@@ -30,43 +31,38 @@
 </head>
 
 <body class="bg-warning">
+  <div class="container">
+    <nav class="container navbar navbar-expand-lg navbar-dark  text-secondary ">
+      <h1 class="mx-auto big-heading">Welcome to Dice Game.</h1>
+    </nav>
 
-  <!-- Title Section -->
-  <section class="title">
-    <div class="heading">
-      <h1 class="big-heading">Refresh Me</h1>
-    </div>
-  </section>
-
-  <!-- Player Name Section -->
-  <section class="player">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-6">
-          <h3 class="player-name">Player 1</h3>
-        </div>
-        <div class="col-lg-6">
-          <h3 class="player-name">Player 2</h3>
-        </div>
+    <!-- input name section -->
+    <section class="input-player-names">
+      <div class="container-fluid">
+        <form action="dice-game.html" method="get">
+          <div class="form-group">
+            <input type="text" name="firstPlayerName" class="name-text form-control" placeholder="Enter First Player name *" required />
+          </div>
+          <div class="form-group">
+            <input type="text" name="secondPlayerName" class="name-text form-control" placeholder="Enter Second Player name *" required />
+          </div>
+          <br>
+          <div class="dice-game-on-btn form-group">
+            <button type="submit" class="btn btn-outline-success btn-sm m-auto"><i class="fas fa-sign-in-alt"></i> Game On...</button>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <button type="reset" class="btn btn-outline-light btn-sm mb-auto"><i class="fas fa-sign-in-alt"></i> Misspelled Name, Click Here...</button>
+          </div>
+        </form>
       </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <img class="dice-image" src="images/dice2.png" alt="diceImage2">
-        </div>
-        <div class="col-lg-6">
-          <img class="dice-image" src="images/dice5.png" alt="diceImage5">
-        </div>
+    </section>
+
+    <!-- Footer Section   -->
+    <footer id="footer" class="input-name-footer">
+      <div class="container">
+        <p class="text-secondary">www <i class="fas fa-dice-four"></i> dicegame <i class="fas fa-dice-four"></i> com</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer Section   -->
-  <footer id="footer">
-    <div class="container-fluid">
-      <p class="text-secondary">www <i class="fas fa-dice-four"></i> dicegame <i class="fas fa-dice-four"></i> com</p>
-    </div>
-  </footer>
-
+    </footer>
+  </div>
 </body>
 
 </html>
