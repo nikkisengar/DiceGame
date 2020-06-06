@@ -5,15 +5,40 @@ location.search.substr(1).split('&')
     function (item) {
       queryDict[item.split('=')[0]] = item.split('=')[1];
     }
-  ); // displaying the name of the players in dice-game.html
-document.querySelector('#player1').innerHTML = queryDict.
-firstPlayerName.replace('+', function () {return ' ';}
-);
-document.querySelector('#player2').innerHTML = queryDict.secondPlayerName.split('+');
+  );
+
+// displaying the name of the players in dice-game.html
+var playerFirst = queryDict.firstPlayerName;
+var playerSecond = queryDict.secondPlayerName;
+
+// Getting names from URL without + sign, which means that we are getting the inout name with spaces
+// before this code when we write name with spaces in name-input.html
+// file than, while getting the names from URL will comes with + sogn
+if (playerFirst.includes('+')) {
+  while (playerFirst.includes('+')) {
+    playerFirst = playerFirst.replace('+', ' ');
+  }
+
+  document.querySelector('#player1').innerHTML = playerFirst;
+} else {
+  document.querySelector('#player1').innerHTML = playerFirst;
+}
+
+// Getting names from URL without + sign, which means that we are getting the inout name with spaces
+// before this code when we write name with spaces in name-input.html
+// file than, while getting the names from URL will comes with + sogn
+if (playerSecond.includes('+')) {
+  while (playerSecond.includes('+')) {
+    playerSecond = playerSecond.replace('+', ' ');
+  }
+
+  document.querySelector('#player2').innerHTML = playerSecond;
+} else {
+  document.querySelector('#player2').innerHTML = playerSecond;
+}
 
 // changing the dice image as per the random number which represent the dice faces
 //document.getElementById('game-play-btn').onclick = changeDiceImg(diceIndex1, diceIndex2);
-
 document.getElementById('game-start-btn').addEventListener('click', function () {
   changeDiceImg();
 });
@@ -35,9 +60,9 @@ function changeDiceImg() {
   // displaying the winning player
   if (diceIndex1 > diceIndex2)
     document.querySelector('.big-heading').innerHTML =
-    '🚩 ' + queryDict.firstPlayerName + ' Wins!';
+    '🚩 ' + playerFirst + ' Wins!';
   else if (diceIndex1 < diceIndex2)
-    document.querySelector('.big-heading').innerHTML = queryDict.secondPlayerName + ' Wins! 🚩';
+    document.querySelector('.big-heading').innerHTML = playerSecond + ' Wins! 🚩';
   else if (diceIndex1 === diceIndex2)
     document.querySelector('.big-heading').innerHTML = '🚩 !..Tie..! 🚩';
   console.log('changeDiceImg End');
@@ -47,7 +72,7 @@ function changeDiceImg() {
 function changeDiceImg1(currentImg, diceIndex1) {
   console.log('changeDiceImg1 Starts' + diceIndex1);
   currentImg[0].setAttribute('src', 'images/dice' + diceIndex1 + '.png');
-  console.log('changeDiceImg1 End' + diceIndex1);// if (diceIndex1 == 1)
+  console.log('changeDiceImg1 End' + diceIndex1); // if (diceIndex1 == 1)
   //   currentImg[0].setAttribute('src', 'images/dice1.png');
   // else if (diceIndex1 == 2)
   //   currentImg[0].setAttribute('src', 'images/dice2.png');
