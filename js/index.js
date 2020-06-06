@@ -6,8 +6,10 @@ location.search.substr(1).split('&')
       queryDict[item.split('=')[0]] = item.split('=')[1];
     }
   ); // displaying the name of the players in dice-game.html
-document.querySelector('#player1').innerHTML = queryDict.firstPlayerName;
-document.querySelector('#player2').innerHTML = queryDict.secondPlayerName;
+document.querySelector('#player1').innerHTML = queryDict.
+firstPlayerName.replace('+', function () {return ' ';}
+);
+document.querySelector('#player2').innerHTML = queryDict.secondPlayerName.split('+');
 
 // changing the dice image as per the random number which represent the dice faces
 //document.getElementById('game-play-btn').onclick = changeDiceImg(diceIndex1, diceIndex2);
