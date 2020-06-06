@@ -1,0 +1,62 @@
+/*************************** name-input.html ***************************/
+/* navbar section */
+.navbar {
+  padding-bottom: 8%;
+}
+
+.input-name-footer {
+  padding-top: 8%;
+}
+
+.dice-game-on-btn {
+  text-align: center;
+}
+
+.name-text {
+  width: 80%;
+  display: block;
+  margin : 0 auto;
+}
+
+/*************************** dice-game.html ***************************/
+
+/* Title Section */
+.big-heading {
+  font-size: 7rem;
+  text-align: center;
+  padding-top: 2%;
+  font-family: 'Caveat', cursive;
+  color: #903749;
+}
+
+/* Player Section */
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2% 15% 4%;
+}
+
+.player-name {
+  text-align: center;
+  color: #903749;
+  font-family: 'Caveat', cursive;
+}
+
+.dice-image{
+  text-align: center;
+  object-fit: contain;
+  height: 205%;
+  width: 100%;
+  padding: 7% 10% 4%;
+}
+
+/* Footer Section */
+#footer {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+#footer p{
+  font-family: 'Caveat', cursive;
+  font-size: 1.7rem;
+}
